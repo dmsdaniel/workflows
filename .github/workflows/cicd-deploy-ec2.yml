@@ -8,9 +8,6 @@ jobs:
   build:
     runs-on: [ubuntu-latest]
     steps:
-      - shell: bash
-        env: SUPER_SECRET: ${{ secrets.DOCKER_USERNAME }}
-        run: example-command "$SUPER_SECRET"    
       - name: Checkout source
         uses: actions/checkout@v3
       - name: Login to Docker Hub
